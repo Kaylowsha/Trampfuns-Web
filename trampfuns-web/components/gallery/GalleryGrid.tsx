@@ -2,8 +2,6 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import Lightbox from 'yet-another-react-lightbox';
-import 'yet-another-react-lightbox/styles.css';
 
 export interface GalleryImage {
   src: string;
@@ -18,14 +16,33 @@ export interface GalleryGridProps {
 }
 
 export const GalleryGrid: React.FC<GalleryGridProps> = ({ images }) => {
-  const [photoIndex, setPhotoIndex] = useState(-1);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
-  const slides = images.map(img => ({
-    src: img.src,
-    alt: img.alt,
-    width: img.width,
-    height: img.height,
-  }));
+  const openLightbox = (index: number) => {
+    setSelectedIndex(index);
+  };
+
+  const closeLightbox = () => {
+    setSelectedIndex(null);
+  };
+
+  const goToPrevious = () => {
+    if (selectedIndex !== null && selectedIndex > 0) {
+      setSelectedIndex(selectedIndex - 1);
+    }
+  };
+
+  const goToNext = () => {
+    if (selectedIndex !== null && selectedIndex < images.length - 1) {
+      setSelectedIndex(selectedIndex + 1);
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') goToPrevious();
+    if (e.key === 'ArrowRight') goToNext();
+  };
 
   return (
     <>
@@ -34,7 +51,7 @@ export const GalleryGrid: React.FC<GalleryGridProps> = ({ images }) => {
           <div
             key={index}
             className="relative aspect-square rounded-xl overflow-hidden cursor-pointer group"
-            onClick={() => setPhotoIndex(index)}
+            onClick={() => openLightbox(index)}
           >
             <Image
               src={image.src}
@@ -52,12 +69,72 @@ export const GalleryGrid: React.FC<GalleryGridProps> = ({ images }) => {
         ))}
       </div>
 
-      <Lightbox
-        open={photoIndex >= 0}
-        close={() => setPhotoIndex(-1)}
-        index={photoIndex}
-        slides={slides}
-      />
+      {/* Simple Lightbox */}
+      {selectedIndex !== null && (
+        <div
+          className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center"
+          onClick={closeLightbox}
+          onKeyDown={handleKeyDown}
+          tabIndex={0}
+        >
+          {/* Close Button */}
+          <button
+            onClick={closeLightbox}
+            className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
+            aria-label="Cerrar"
+          >
+            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          {/* Previous Button */}
+          {selectedIndex > 0 && (
+            <button
+              onClick={(e) => { e.stopPropagation(); goToPrevious(); }}
+              className="absolute left-4 text-white hover:text-gray-300 transition-colors z-10"
+              aria-label="Anterior"
+            >
+              <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+          )}
+
+          {/* Image */}
+          <div
+            className="relative max-w-7xl max-h-[90vh] w-full h-full flex items-center justify-center p-8"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <Image
+              src={images[selectedIndex].src}
+              alt={images[selectedIndex].alt}
+              fill
+              className="object-contain"
+              sizes="100vw"
+              priority
+            />
+          </div>
+
+          {/* Next Button */}
+          {selectedIndex < images.length - 1 && (
+            <button
+              onClick={(e) => { e.stopPropagation(); goToNext(); }}
+              className="absolute right-4 text-white hover:text-gray-300 transition-colors z-10"
+              aria-label="Siguiente"
+            >
+              <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          )}
+
+          {/* Counter */}
+          <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm bg-black/50 px-4 py-2 rounded-full">
+            {selectedIndex + 1} / {images.length}
+          </div>
+        </div>
+      )}
     </>
   );
 };
