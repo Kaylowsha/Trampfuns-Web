@@ -5,6 +5,7 @@ import { Container } from '@/components/ui/Container';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
+import { assetPath } from '@/lib/constants/config';
 
 export const metadata: Metadata = {
   title: 'Servicios Adicionales',
@@ -101,7 +102,7 @@ export default function ServiciosAdicionalesPage() {
       {/* Hero */}
       <section className="relative h-[60vh] min-h-[500px]">
         <Image
-          src="/images/gallery/IMG_9120.JPG"
+          src={assetPath("/images/gallery/IMG_9120.JPG")}
           alt="Servicios Trampfuns"
           fill
           className="object-cover brightness-75"

@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
 import { siteInfo } from '@/lib/constants/site-info';
+import { assetPath } from '@/lib/constants/config';
 
 export const Hero: React.FC = () => {
   return (
@@ -96,7 +97,7 @@ export const Hero: React.FC = () => {
               <div className="space-y-4">
                 <div className="relative h-48 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
                   <Image
-                    src="/images/gallery/IMG_9127.JPG"
+                    src={assetPath("/images/gallery/IMG_9127.JPG")}
                     alt="Trampolín Park"
                     fill
                     className="object-cover"
@@ -104,7 +105,7 @@ export const Hero: React.FC = () => {
                 </div>
                 <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
                   <Image
-                    src="/images/gallery/IMG_9129.JPG"
+                    src={assetPath("/images/gallery/IMG_9129.JPG")}
                     alt="Juegos Modulares"
                     fill
                     className="object-cover"
@@ -114,7 +115,7 @@ export const Hero: React.FC = () => {
               <div className="space-y-4 pt-8">
                 <div className="relative h-64 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
                   <Image
-                    src="/images/gallery/IMG_9120.JPG"
+                    src={assetPath("/images/gallery/IMG_9120.JPG")}
                     alt="Instalaciones"
                     fill
                     className="object-cover"
@@ -122,7 +123,7 @@ export const Hero: React.FC = () => {
                 </div>
                 <div className="relative h-48 rounded-2xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
                   <Image
-                    src="/images/gallery/IMG_9130.JPG"
+                    src={assetPath("/images/gallery/IMG_9130.JPG")}
                     alt="Espacios"
                     fill
                     className="object-cover"

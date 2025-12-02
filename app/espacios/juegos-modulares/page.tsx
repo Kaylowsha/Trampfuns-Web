@@ -5,6 +5,7 @@ import { Container } from '@/components/ui/Container';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
+import { assetPath } from '@/lib/constants/config';
 
 export const metadata: Metadata = {
   title: 'Juegos Modulares',
@@ -83,7 +84,7 @@ export default function JuegosModularesPage() {
       {/* Hero */}
       <section className="relative h-[60vh] min-h-[500px]">
         <Image
-          src="/images/gallery/IMG_9129.JPG"
+          src={assetPath("/images/gallery/IMG_9129.JPG")}
           alt="Juegos Modulares Trampfuns"
           fill
           className="object-cover brightness-75"
@@ -171,7 +172,7 @@ export default function JuegosModularesPage() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="relative h-96 rounded-2xl overflow-hidden group">
               <Image
-                src="/images/gallery/IMG_9129.JPG"
+                src={assetPath("/images/gallery/IMG_9129.JPG")}
                 alt="Vista del juego modular"
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -180,7 +181,7 @@ export default function JuegosModularesPage() {
             <div className="grid grid-rows-2 gap-6">
               <div className="relative h-full rounded-2xl overflow-hidden group">
                 <Image
-                  src="/images/gallery/IMG_9130.JPG"
+                  src={assetPath("/images/gallery/IMG_9130.JPG")}
                   alt="Detalles del juego"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -188,7 +189,7 @@ export default function JuegosModularesPage() {
               </div>
               <div className="relative h-full rounded-2xl overflow-hidden group">
                 <Image
-                  src="/images/gallery/IMG_9120.JPG"
+                  src={assetPath("/images/gallery/IMG_9120.JPG")}
                   alt="Área de juegos"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"

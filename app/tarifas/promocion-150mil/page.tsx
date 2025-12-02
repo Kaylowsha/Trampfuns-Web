@@ -5,6 +5,7 @@ import { Container } from '@/components/ui/Container';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { siteInfo } from '@/lib/constants/site-info';
+import { assetPath } from '@/lib/constants/config';
 
 export const metadata: Metadata = {
   title: 'Promoción $150.000',
@@ -19,7 +20,7 @@ export default function PromocionPage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/gallery/IMG_9127.JPG"
+            src={assetPath("/images/gallery/IMG_9127.JPG")}
             alt="Promoción Trampfuns"
             fill
             className="object-cover brightness-50"

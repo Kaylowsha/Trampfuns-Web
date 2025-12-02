@@ -5,6 +5,7 @@ import { Container } from '@/components/ui/Container';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent } from '@/components/ui/Card';
+import { assetPath } from '@/lib/constants/config';
 
 export const metadata: Metadata = {
   title: 'Trampolín Park',
@@ -60,7 +61,7 @@ export default function TrampolinParkPage() {
       {/* Hero */}
       <section className="relative h-[60vh] min-h-[500px]">
         <Image
-          src="/images/gallery/IMG_9127.JPG"
+          src={assetPath("/images/gallery/IMG_9127.JPG")}
           alt="Trampolín Park Trampfuns"
           fill
           className="object-cover brightness-75"
@@ -119,7 +120,7 @@ export default function TrampolinParkPage() {
           <div className="grid md:grid-cols-3 gap-4">
             <div className="relative h-64 md:h-80 rounded-xl overflow-hidden group">
               <Image
-                src="/images/gallery/IMG_9127.JPG"
+                src={assetPath("/images/gallery/IMG_9127.JPG")}
                 alt="Vista del trampolín park"
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -127,7 +128,7 @@ export default function TrampolinParkPage() {
             </div>
             <div className="relative h-64 md:h-80 rounded-xl overflow-hidden group">
               <Image
-                src="/images/gallery/IMG_9129.JPG"
+                src={assetPath("/images/gallery/IMG_9129.JPG")}
                 alt="Área de juegos"
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -135,7 +136,7 @@ export default function TrampolinParkPage() {
             </div>
             <div className="relative h-64 md:h-80 rounded-xl overflow-hidden group">
               <Image
-                src="/images/gallery/IMG_9130.JPG"
+                src={assetPath("/images/gallery/IMG_9130.JPG")}
                 alt="Instalaciones"
                 fill
                 className="object-cover group-hover:scale-110 transition-transform duration-500"
@@ -181,7 +182,7 @@ export default function TrampolinParkPage() {
             </div>
             <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="/images/gallery/IMG_9120.JPG"
+                src={assetPath("/images/gallery/IMG_9120.JPG")}
                 alt="Seguridad en Trampfuns"
                 fill
                 className="object-cover"
