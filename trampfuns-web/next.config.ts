@@ -5,10 +5,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
-  // Si tu repositorio se llama algo diferente a "usuario.github.io",
-  // descomenta y ajusta la siguiente línea:
-  // basePath: '/nombre-de-tu-repo',
-  // assetPrefix: '/nombre-de-tu-repo/',
+  basePath: '/Trampfuns-Web',
+  assetPrefix: '/Trampfuns-Web/',
 };
 
 export default nextConfig;
