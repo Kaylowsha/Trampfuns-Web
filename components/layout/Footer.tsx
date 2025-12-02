@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { siteInfo } from '@/lib/constants/site-info';
 import { Container } from '@/components/ui/Container';
+import { assetPath } from '@/lib/constants/config';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -15,7 +16,7 @@ export const Footer: React.FC = () => {
           <div className="space-y-4">
             <div className="relative w-40 h-14">
               <Image
-                src="/images/brand/logo.png"
+                src={assetPath('/images/brand/logo.png')}
                 alt="Trampfuns"
                 fill
                 className="object-contain brightness-0 invert"

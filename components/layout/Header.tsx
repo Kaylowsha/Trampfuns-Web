@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils/cn';
 import { Button } from '@/components/ui/Button';
 import { Container } from '@/components/ui/Container';
+import { assetPath } from '@/lib/constants/config';
 
 const navigation = [
   { name: 'Inicio', href: '/' },
@@ -46,7 +47,7 @@ export const Header: React.FC = () => {
           <Link href="/" className="flex items-center space-x-2 group">
             <div className="relative w-48 h-16 transition-transform group-hover:scale-105">
               <Image
-                src="/images/brand/logo.png"
+                src={assetPath('/images/brand/logo.png')}
                 alt="Trampfuns - Plena Diversión"
                 fill
                 className="object-contain"

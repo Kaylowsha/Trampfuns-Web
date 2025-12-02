@@ -4,6 +4,7 @@ import { Container } from '@/components/ui/Container';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
 import { GalleryGrid } from '@/components/gallery/GalleryGrid';
+import { assetPath } from '@/lib/constants/config';
 
 export const metadata: Metadata = {
   title: 'Galería de Fotos',
@@ -13,70 +14,70 @@ export const metadata: Metadata = {
 // Imágenes disponibles en el proyecto
 const galleryImages = [
   {
-    src: '/images/gallery/IMG_9120.JPG',
+    src: assetPath('/images/gallery/IMG_9120.JPG'),
     alt: 'Instalaciones Trampfuns',
     width: 1200,
     height: 900,
     category: 'instalaciones',
   },
   {
-    src: '/images/gallery/IMG_9127.JPG',
+    src: assetPath('/images/gallery/IMG_9127.JPG'),
     alt: 'Trampolín Park',
     width: 1200,
     height: 900,
     category: 'trampolin',
   },
   {
-    src: '/images/gallery/IMG_9128 2.jpg',
+    src: assetPath('/images/gallery/IMG_9128 2.jpg'),
     alt: 'Vista del trampolín',
     width: 1200,
     height: 900,
     category: 'trampolin',
   },
   {
-    src: '/images/gallery/IMG_9129.JPG',
+    src: assetPath('/images/gallery/IMG_9129.JPG'),
     alt: 'Juegos Modulares',
     width: 1200,
     height: 900,
     category: 'juegos',
   },
   {
-    src: '/images/gallery/IMG_9130.JPG',
+    src: assetPath('/images/gallery/IMG_9130.JPG'),
     alt: 'Área de juegos',
     width: 1200,
     height: 900,
     category: 'juegos',
   },
   {
-    src: '/images/gallery/IMG_9131.JPG',
+    src: assetPath('/images/gallery/IMG_9131.JPG'),
     alt: 'Instalaciones internas',
     width: 1200,
     height: 900,
     category: 'instalaciones',
   },
   {
-    src: '/images/gallery/IMG_9132.JPG',
+    src: assetPath('/images/gallery/IMG_9132.JPG'),
     alt: 'Detalles de espacios',
     width: 1200,
     height: 900,
     category: 'instalaciones',
   },
   {
-    src: '/images/gallery/IMG_9135.JPG',
+    src: assetPath('/images/gallery/IMG_9135.JPG'),
     alt: 'Área completa',
     width: 1200,
     height: 900,
     category: 'instalaciones',
   },
   {
-    src: '/images/gallery/IMG_9136 2.jpg',
+    src: assetPath('/images/gallery/IMG_9136 2.jpg'),
     alt: 'Vista panorámica',
     width: 1200,
     height: 900,
     category: 'instalaciones',
   },
   {
-    src: '/images/gallery/IMG_9243 2.jpg',
+    src: assetPath('/images/gallery/IMG_9243 2.jpg'),
     alt: 'Exterior de las instalaciones',
     width: 1200,
     height: 900,
