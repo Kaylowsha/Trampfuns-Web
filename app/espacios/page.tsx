@@ -5,6 +5,7 @@ import { Container } from '@/components/ui/Container';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { Button } from '@/components/ui/Button';
+import { assetPath } from '@/lib/constants/config';
 
 export const metadata: Metadata = {
   title: 'Nuestros Espacios',
@@ -25,7 +26,7 @@ const espacios = [
       'Aro de básquetbol',
       'Zona de saltos libres',
     ],
-    image: '/images/gallery/IMG_9127.JPG',
+    image: assetPath('/images/gallery/IMG_9127.JPG'),
     badge: 'Popular',
     badgeVariant: 'cyan' as const,
   },
@@ -42,7 +43,7 @@ const espacios = [
       'Áreas acolchadas',
       'Zona segura para toddlers',
     ],
-    image: '/images/gallery/IMG_9129.JPG',
+    image: assetPath('/images/gallery/IMG_9129.JPG'),
     badge: 'Favorito',
     badgeVariant: 'magenta' as const,
   },
@@ -59,7 +60,7 @@ const espacios = [
       'Área de servicio de alimentos',
       'Espacio para decoración',
     ],
-    image: '/images/gallery/IMG_9120.JPG',
+    image: assetPath('/images/gallery/IMG_9120.JPG'),
     badge: 'Incluido',
     badgeVariant: 'purple' as const,
   },
