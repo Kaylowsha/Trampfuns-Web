@@ -151,7 +151,7 @@ export const Footer: React.FC = () => {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-gray-800 text-center">
           <p className="text-gray-400 text-sm">
-            © {currentYear} <span className="text-[#00B8D4] font-semibold">Trampfuns</span>. Todos los derechos reservados.
+            © {currentYear} <span className="text-[#00B8D4] font-semibold">Trampfuns</span>
           </p>
         </div>
       </Container>
