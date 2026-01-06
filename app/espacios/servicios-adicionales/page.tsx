@@ -20,6 +20,7 @@ const services = [
     features: [
       'Refrigerador',
       'Microondas',
+      'Horno eléctrico',
       'Utensilios básicos',
       'Área de preparación',
       'Lava platos',
@@ -43,10 +44,11 @@ const services = [
     description: 'Capacidad para 50 personas cómodamente sentadas.',
     features: [
       '10 mesas grandes',
-      '50 sillas',
+      '2 mesas plegables',
+      'Bancos acolchados y pisos plásticos',
+      'Aire acondicionado y ventiladores',
       'Mesas auxiliares',
       'Área de servicio',
-      'Espacio para decoración',
     ],
   },
   {
@@ -89,9 +91,8 @@ const services = [
 
 const included = [
   'Uso exclusivo de todas las instalaciones',
-  'Limpieza antes y después del evento',
+  'Limpieza: Dejar limpio tras uso o pagar $12.000 adicional',
   'Electricidad y agua incluidas',
-  'Estacionamiento disponible',
   'Personal de apoyo si lo necesitas',
   'Sin costos ocultos',
 ];

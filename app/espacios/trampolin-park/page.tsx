@@ -31,8 +31,7 @@ const features = [
   },
   {
     icon: '🏀',
-    title: 'Básquetbol Aéreo',
-    description: 'Aro de básquetbol para clavadas desde el trampolín.',
+    description: 'Aro de básquetbol para encestar desde el trampolín.',
   },
   {
     icon: '🛡️',

@@ -33,7 +33,7 @@ const ageGroups = [
     icon: '🧒',
     description: 'Nivel intermedio con más desafíos y obstáculos.',
     features: [
-      'Resbalín mediano',
+      '1 resbalín',
       'Túneles de exploración',
       'Obstáculos suaves',
       'Áreas de escalada básica',
@@ -48,7 +48,7 @@ const ageGroups = [
     features: [
       'Mega resbalín de 3 pisos',
       'Túneles complejos',
-      'Puentes colgantes',
+      'Anillos',
       'Zona de desafíos',
     ],
     color: 'purple',
@@ -73,8 +73,8 @@ const highlights = [
   },
   {
     icon: '🛡️',
-    title: 'Materiales Certificados',
-    description: 'Todos los materiales son anti-bacteriales y libres de tóxicos.',
+    title: 'Gran Calidad',
+    description: 'Materiales de alta durabilidad y diseño seguro para los niños.',
   },
 ];
 
