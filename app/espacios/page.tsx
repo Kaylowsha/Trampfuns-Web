@@ -38,7 +38,7 @@ const espacios = [
     ageRange: '1-9 años',
     features: [
       'Juego modular 3 pisos',
-      'Múltiples resbalines',
+      '1 resbalín',
       'Túneles de exploración',
       'Áreas acolchadas',
       'Zona segura para toddlers',
